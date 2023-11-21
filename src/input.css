@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.userAuth {
+    @apply text-sm
+}
+
+.userAuth input:nth-child(-n+4) {
+    @apply border-2 rounded-sm py-1 pl-2 transition ease-in-out duration-200 bg-transparent focus:outline-none focus:border-green-500 text-sm;
+}
+
+.userAuth span label {
+    @apply font-semibold;
+}
+
+.addPetCard {
+    @apply flex mx-auto justify-center items-center bg-slate-100 shadow-xl w-60 h-64 cursor-pointer transition-transform hover:scale-105 rounded-sm;
+}
+
+.usedPetCard {
+    @apply flex flex-col mx-auto bg-slate-100 shadow-xl w-60 h-64 cursor-pointer transition-transform hover:scale-105 rounded-md overflow-hidden;
+}
+
+.inputFields {
+    @apply border-2 border-black w-44;
+}
