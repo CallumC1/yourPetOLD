@@ -19,7 +19,7 @@
 }
 
 .usedPetCard {
-    @apply flex flex-col mx-auto bg-slate-100 shadow-xl w-60 h-64 cursor-pointer transition-transform hover:scale-105 rounded-md overflow-hidden;
+    @apply flex flex-col mx-auto bg-slate-100 shadow-xl w-60 h-64 transition-transform hover:scale-105 rounded-md overflow-hidden;
 }
 
 .inputFields {

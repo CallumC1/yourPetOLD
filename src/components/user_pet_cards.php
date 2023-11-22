@@ -2,9 +2,13 @@
     <div class="usedPetCard">
         <span class="flex from-[#306060] to-[#bfd9d9] bg-gradient-to-tr h-16 items-center ">
             <?php if ($row["pet_type"] === "dog"): ?>
-            <img src="<?= select_random('dog') ?>" class="bg-[#306060] bg-cover border-2 border-white mx-auto rounded-full w-16 h-16 -mb-16 object-cover">
+                <a 
+                href=""
+                class="flex bg-[#306060] border-2 border-white mx-auto rounded-full w-16 h-16 -mb-16 cursor-pointer">
+                    <img src="/yourpet/src/assets/feather-icons/camera.svg" class="w-1/2 h-1/2 object-cover m-auto">
+                </a>
             <?php else: ?>
-            <img src="<?= select_random('cat') ?>" class="bg-[#306060] bg-cover border-2 border-white mx-auto rounded-full w-16 h-16 -mb-16 object-cover">
+                <img src="<?= select_random('cat') ?>" class="bg-[#306060] bg-cover border-2 border-white mx-auto rounded-full w-16 h-16 -mb-16 object-cover">
             <?php endif; ?>
             
         </span>
