@@ -2,6 +2,7 @@
 session_start();
 include("../components/header.php");
 include("../handlers/generate_csrf.php"); ?>
+
 <?php
 // Sessions used to keep data in table upon redirect.
 session_regenerate_id();
@@ -76,7 +77,7 @@ if (isset($_GET["msg"]))
 
 
 </div>
-<script src="/userauthphp/src/js/main.js"></script>
+<script src="/yourpet/src/js/main.js"></script>
 
 </body>
 </html>

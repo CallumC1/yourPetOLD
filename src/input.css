@@ -25,3 +25,20 @@
 .inputFields {
     @apply border-2 border-black w-44;
 }
+
+table {
+    @apply bg-white w-full mx-auto;
+}
+
+th {
+    @apply bg-[#275457] text-white py-3 pl-3 text-left;
+}
+
+table td {
+    @apply py-3 pl-3
+}
+
+table tr:nth-last-of-type(even) {
+    @apply bg-zinc-200 border-y border-zinc-400 py-5;
+}
+

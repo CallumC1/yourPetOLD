@@ -12,15 +12,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Token validation failed (CSRF)");
     }
 
-    $first_name = $_POST["first_name"];
-    $last_name = $_POST["last_name"];
     $email = $_POST["email"];
     $password = $_POST["password"];
 
     // Store data to be sent back into the form on redirect.
     $formData = [
-        'first_name' => $first_name,
-        'last_name'  => $last_name,
         'email'      => $email,
     ];
     $_SESSION['login_form_data'] = $formData;

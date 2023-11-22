@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("./generate_csrf.php");
 generate_csrf();
 
@@ -7,6 +8,10 @@ session_regenerate_id(true);
 
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
+        die("Token validation failed (CSRF)");
+    }
 
     $first_name = $_POST["first_name"];
     $last_name = $_POST["last_name"];
@@ -59,7 +64,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($stmt->execute()) {
             // Successfully added the user, now redirect back with a message.
             $stmt->close();
-            header("Location: /yourpet/src/pages/signup.php?msg=success");
+            header("Location: /yourpet/src/pages/login.php?msg=signup-success");
         } else {
             echo ("Opps! There was an error executing the statement.");
         };

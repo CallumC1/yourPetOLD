@@ -35,16 +35,6 @@ if (isset($_GET["msg"]))
             <div class="flex flex-col gap-4 mt-3">
 
                 <span class="flex flex-col">
-                    <label for="first_name">First Name</label>
-                    <input type="text" id="first_name" name="first_name" placeholder="Your first name" value="<?=$first_name?>" required>
-                </span>
-
-                <span class="flex flex-col">
-                    <label for="last_name">Last Name</label>
-                    <input type="text" id="last_name" name="last_name" placeholder="Your last name" value="<?=$last_name?>" required>
-                </span>
-
-                <span class="flex flex-col">
                     <label for="email">Email </label>
                     <input type="email" id="email" name="email" placeholder="Your email address" value="<?=$email?>" required>
                     <?= $msg === "invalid-user" ? "<p class='text-red-500'>Account with email does not exist.</p>" : "" ?>
@@ -76,7 +66,7 @@ if (isset($_GET["msg"]))
 
 </div>
 
-<script src="/userauthphp/src/js/main.js"></script>
+<script src="/yourpet/src/js/main.js"></script>
 
 </body>
 </html>
