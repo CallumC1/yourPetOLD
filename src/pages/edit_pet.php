@@ -61,3 +61,6 @@ if (!($user_id === $pet_user_id) && ($user_data["user_roles"] != "admin")) {
 
     <button type="submit" class="w-full h-12 bg-[#1a4147] hover:bg-[#12323b] text-white font-semibold mt-2">Edit Pet</button>
 </form>
+
+<!-- Delete Pet -->
+<a href="/yourpet/src/handlers/delete_pet_process.php?pet_id=<?=$pet["pet_id"]?>" class="border-2 bg-red-700 border-black flex flex-col w-96 mx-auto mt-10 drop-shadow-lg items-center text-white font-semibold">Delete <?=$pet["pet_name"]?>?</a>

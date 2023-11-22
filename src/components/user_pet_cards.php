@@ -2,9 +2,9 @@
     <div class="usedPetCard">
         <span class="flex from-[#306060] to-[#bfd9d9] bg-gradient-to-tr h-16 items-center ">
             <?php if ($row["pet_type"] === "dog"): ?>
-            <img src="/yourpet/src/assets/images/dog.jpg" class="bg-[#306060] bg-cover border-2 border-white mx-auto rounded-full w-16 h-16 -mb-16 object-cover">
+            <img src="<?= select_random('dog') ?>" class="bg-[#306060] bg-cover border-2 border-white mx-auto rounded-full w-16 h-16 -mb-16 object-cover">
             <?php else: ?>
-            <img src="/yourpet/src/assets/images/cat.jpg" class="bg-[#306060] bg-cover border-2 border-white mx-auto rounded-full w-16 h-16 -mb-16 object-cover">
+            <img src="<?= select_random('cat') ?>" class="bg-[#306060] bg-cover border-2 border-white mx-auto rounded-full w-16 h-16 -mb-16 object-cover">
             <?php endif; ?>
             
         </span>
@@ -26,3 +26,43 @@
         </div>
     </div>
 <?php endwhile; ?>
+
+
+<?php
+
+function select_random($type){
+    if ($type === "cat") {
+
+        $photos = [
+            "/yourpet/src/assets/images/cats/cat1.jpg",
+            "/yourpet/src/assets/images/cats/cat2.jpg",
+            "/yourpet/src/assets/images/cats/cat3.jpg",
+            "/yourpet/src/assets/images/cats/cat4.jpg",
+            "/yourpet/src/assets/images/cats/cat5.jpg",
+            "/yourpet/src/assets/images/cats/cat6.jpg",
+            "/yourpet/src/assets/images/cats/cat7.jpg",
+            "/yourpet/src/assets/images/cats/cat8.jpg",
+        ];
+    
+    } else {
+        $photos = [
+            "/yourpet/src/assets/images/dogs/dog1.jpg",
+            "/yourpet/src/assets/images/dogs/dog2.jpg",
+            "/yourpet/src/assets/images/dogs/dog3.jpg",
+            "/yourpet/src/assets/images/dogs/dog4.jpg",
+            "/yourpet/src/assets/images/dogs/dog5.jpg",
+            "/yourpet/src/assets/images/dogs/dog6.jpg",
+            "/yourpet/src/assets/images/dogs/dog7.jpg",
+            "/yourpet/src/assets/images/dogs/dog8.jpg",
+        ];
+    }
+
+    // Select a random index from the array
+    $random_index = array_rand($photos);
+    $random_photo = $photos[$random_index];
+
+    return $random_photo;
+
+}
+
+?>

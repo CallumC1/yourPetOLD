@@ -636,6 +636,10 @@ video {
   margin-bottom: 1rem;
 }
 
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
 .flex {
   display: flex;
 }
@@ -873,6 +877,11 @@ video {
 .bg-\[\#204a4f\] {
   --tw-bg-opacity: 1;
   background-color: rgb(32 74 79 / var(--tw-bg-opacity));
+}
+
+.bg-red-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(185 28 28 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-tr {

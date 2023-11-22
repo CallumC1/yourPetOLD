@@ -84,7 +84,7 @@ if (isset($_POST["search"])) {
     $sql = "SELECT pets.*, users.first_name, users.last_name
     FROM pets
     INNER JOIN users ON users.user_id = pets.FK_user_id ORDER BY pet_name LIMIT 10 OFFSET ?";
-   
+
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("i", $_GET['page']);
     $stmt->execute();
@@ -121,6 +121,7 @@ if (isset($_GET["msg"])): ?>
     </div>
 <?php endif; ?>
 
+<div class="mb-10"></div>
 
 <!-- Close Modal Script -->
 <script src="/yourpet/src/js/modal.js"></script>
