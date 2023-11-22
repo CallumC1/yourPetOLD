@@ -1,8 +1,6 @@
 <?php 
 require_once($_SERVER['DOCUMENT_ROOT'] . "/yourpet/src/handlers/connect_db.php");
 
-
-
 function get_pet_by_id($pet_id){
     $conn = connect_to_database();
 

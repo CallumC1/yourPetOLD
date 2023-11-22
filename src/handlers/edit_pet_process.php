@@ -1,8 +1,10 @@
 <?php
 session_start();
 
-
 if($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    require($_SERVER['DOCUMENT_ROOT'] . "/yourpet/src/handlers/get_pet.php");
+
 
     $pet_name = $_POST["pet_name"];
     $pet_type = $_POST["pet_type"];
@@ -10,12 +12,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $pet_age_str = $_POST["pet_age"];
     $pet_id = $_POST["pet_id"];
 
+    $pet = get_pet_by_id($pet_id);
+
+
+
+    
     // Needs to be changed dynamicly.
     $user_id = $_SESSION["user_data"]["user_id"];
 
     // Check user owns the pet or if the user is an admin.
 
-    if (!($user_id === $pet_id) && ($_SESSION["user_data"]["user_roles"] != "admin")) {
+    if (!($user_id === $pet["FK_user_id"]) && ($_SESSION["user_data"]["user_roles"] != "admin")) {
         die("You do not own this pet.");
     }
 
@@ -29,7 +36,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
 
-    require("./connect_db.php");
+    require_once("./connect_db.php");
     $conn = connect_to_database();
 
     $query = "UPDATE pets SET pet_name=?, pet_type=?, pet_breed=?, pet_age=? WHERE pet_id=?";
