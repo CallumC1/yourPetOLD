@@ -13,7 +13,7 @@ $user_data = get_user();
     <!-- Manage Pets -->
 
     <h1 class="text-2xl font-semibold text-center">Manage your pets</h1>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-5 my-10">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center items-center gap-5 my-10">
 
         <!-- Loop through a users pets and add the below card to every pet. -->
         

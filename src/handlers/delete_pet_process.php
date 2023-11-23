@@ -11,7 +11,6 @@ $pet = get_pet_by_id($_GET["pet_id"]);
 $user_id = $user_data["user_id"];
 $pet_user_id = $pet["FK_user_id"];
 
-
 if (!($user_id === $pet_user_id) && ($user_data["user_roles"] != "admin")) {
     die("You do not own this pet.");
 }

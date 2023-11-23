@@ -14,8 +14,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $pet = get_pet_by_id($pet_id);
 
-
-
     
     // Needs to be changed dynamicly.
     $user_id = $_SESSION["user_data"]["user_id"];

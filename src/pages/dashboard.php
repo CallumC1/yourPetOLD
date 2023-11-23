@@ -20,10 +20,8 @@ $user_role = $_SESSION["user_data"]["user_roles"];
 
 if ($user_role === "user") {
     include($_SERVER['DOCUMENT_ROOT'] . "/yourpet/src/pages/user_dashboard.php");
-    // echo("You are a user.");
 } elseif ($user_role === "admin") {
     include($_SERVER['DOCUMENT_ROOT'] . "/yourpet/src/pages/admin_dashboard.php");
-    // echo("You are an admin.");
 }
 
 
