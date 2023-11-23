@@ -41,16 +41,6 @@ $user_data = get_user();
             <label for="pet_age" class="text-black border-2 border-black bg-zinc-200 px-3">Pet Age:</label>
             <input type="number" name="pet_age" id="pet_age" max="18" class="inputFields" required>
         </span>
-
-        <span class="flex justify-between my-1">
-            <label for="pet_image" class="text-black border-2 border-black bg-zinc-200 px-3">Pet Age:</label>
-            <input 
-                type="file"
-                name="pet_image" 
-                class="inputFields"
-                accept=".jpg,.jpeg,.png"
-                required>
-        </span>
     </div>
 
     <button type="submit" class="w-full h-12 bg-[#1a4147] hover:bg-[#12323b] text-white font-semibold mt-2">Add Pet</button>

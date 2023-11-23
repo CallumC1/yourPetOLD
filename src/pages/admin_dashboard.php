@@ -1,5 +1,5 @@
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . "/yourpet/src/components/admin_navbar.php");
+// include($_SERVER['DOCUMENT_ROOT'] . "/yourpet/src/components/admin_navbar.php");
 require($_SERVER['DOCUMENT_ROOT'] . "/yourpet/src/handlers/get_user.php");
 $user_data = get_user();
 ?>
