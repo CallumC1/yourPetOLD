@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("../components/header.php")
+include("../components/header.php");
 ?>
 
 
@@ -18,7 +18,6 @@ include("../components/header.php")
         Welcome to <b>Your Pet</b>, your trusted partner in pet care. Our experienced team is dedicated to keeping your furry friends happy and healthy. From routine check-ups to specialized treatments, we provide expert care with a personal touch. At [Veterinary Clinic Name], we understand that your pets are family, and we're here to ensure they lead long, vibrant lives. Join us in fostering the well-being of your cherished companions.
 
 </div>
-
 
 </body>
 </html>

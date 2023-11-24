@@ -11,12 +11,12 @@
 
         <div class="px-7 mt-10 text-xs">
             <span class="flex items-center justify-center gap-3">
-                <p class="text-lg font-semibold"><?= $row["pet_name"] ?></p>
+                <p class="text-lg font-semibold"><?= htmlspecialchars($row["pet_name"]) ?></p>
                 <p>•</p>
-                <p class="font-semibold">Age <?= $row["pet_age"] ?></p>
+                <p class="font-semibold">Age <?= htmlspecialchars($row["pet_age"]) ?></p>
             </span>
-            <p class="font-semibold text-center"><?= $row["pet_type"] ?></p>
-            <p class="font-semibold text-center"><?= $row["pet_breed"] ?></p>                
+            <p class="font-semibold text-center"><?= htmlspecialchars($row["pet_type"]) ?></p>
+            <p class="font-semibold text-center"><?= htmlspecialchars($row["pet_breed"]) ?></p>                
         </div>
 
             <!-- Action Buttons -->

@@ -11,6 +11,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/yourpet/src/handlers/authentication.php");
     <link href="/yourPet/dist/output.css" rel="stylesheet">
     <title>Your Pet</title>
 </head>
+<body>
 <nav class="flex items-center justify-between w-full h-20 px-5 bg-[#275457] ">
     <h1 class="text-white text-xl font-bold">Your Pet</h1>
     <ul class="flex gap-4 text-lg font-semibold text-white">

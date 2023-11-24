@@ -1,13 +1,7 @@
 <?php 
 session_start();
 include($_SERVER['DOCUMENT_ROOT'] . "/yourpet/src/components/header.php");
-?>
-<body>
-    
-</body>
-</html>
 
-<?php
 require($_SERVER['DOCUMENT_ROOT'] . "/yourpet/src/handlers/get_user.php");
 $user_data = get_user();
 ?>
@@ -45,3 +39,6 @@ $user_data = get_user();
 
     <button type="submit" class="w-full h-12 bg-[#1a4147] hover:bg-[#12323b] text-white font-semibold mt-2">Add Pet</button>
 </form>
+
+</body>
+</html>

@@ -25,7 +25,6 @@ if (isset($_GET["msg"]))
 }
 
 ?>
-<body>
 
 <div class="flex flex-col items-center justify-center mt-[7rem]">
     <div class="bg-slate-50 drop-shadow-xl w-[22rem] h-full border-2 border-black p-4">

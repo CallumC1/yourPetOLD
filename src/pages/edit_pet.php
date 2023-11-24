@@ -2,11 +2,6 @@
 session_start();
 include($_SERVER['DOCUMENT_ROOT'] . "/yourpet/src/components/header.php");
 ?>
-<body>
-    
-</body>
-</html>
-
 <?php
 
 require($_SERVER['DOCUMENT_ROOT'] . "/yourpet/src/handlers/get_user.php");
@@ -24,7 +19,6 @@ if (!($user_id === $pet_user_id) && ($user_data["user_roles"] != "admin")) {
     die("You do not own this pet.");
 }
 
-
 ?>
 
 <form
@@ -35,7 +29,7 @@ if (!($user_id === $pet_user_id) && ($user_data["user_roles"] != "admin")) {
 
         <span class="flex justify-between my-1">
             <label for="pet_name" class="text-black border-2 border-black bg-zinc-200 px-3">Pet Name:</label>
-            <input type="text" name="pet_name" id="pet_name" value="<?= $pet['pet_name'] ?>" class="inputFields" required>
+            <input type="text" name="pet_name" id="pet_name" value="<?= htmlspecialchars($pet['pet_name']) ?>" class="inputFields" required>
         </span>
         
         <span class="flex justify-between my-1">
@@ -48,12 +42,12 @@ if (!($user_id === $pet_user_id) && ($user_data["user_roles"] != "admin")) {
 
         <span class="flex justify-between my-1">
             <label for="pet_breed" class="text-black border-2 border-black bg-zinc-200 px-3">Pet Breed:</label>
-            <input type="text" name="pet_breed" id="pet_breed" value="<?= $pet['pet_breed'] ?>" class="inputFields" required>
+            <input type="text" name="pet_breed" id="pet_breed" value="<?= htmlspecialchars($pet['pet_breed']) ?>" class="inputFields" required>
         </span>
         
         <span class="flex justify-between my-1">
             <label for="pet_age" class="text-black border-2 border-black bg-zinc-200 px-3">Pet Age:</label>
-            <input type="number" name="pet_age" id="pet_age" value="<?= $pet['pet_age'] ?>" class="inputFields" required>
+            <input type="number" name="pet_age" id="pet_age" value="<?= htmlspecialchars($pet['pet_age']) ?>" class="inputFields" required>
         </span>
     </div>
     <input type="hidden" name="pet_id" id="pet_id" value="<?= $_GET["pet_id"] ?>" required>
@@ -64,3 +58,7 @@ if (!($user_id === $pet_user_id) && ($user_data["user_roles"] != "admin")) {
 
 <!-- Delete Pet -->
 <a href="/yourpet/src/handlers/delete_pet_process.php?pet_id=<?=$pet["pet_id"]?>" class="border-2 bg-red-700 border-black flex flex-col w-96 mx-auto mt-10 drop-shadow-lg items-center text-white font-semibold">Delete <?=$pet["pet_name"]?>?</a>
+
+
+</body>
+</html>
